@@ -40,12 +40,12 @@
         {
             "name": "gcc-debug",
             "configurePreset": "ninja-gcc-debug",
-            "cleanFirst": true
+            "cleanFirst": false
         },
         {
             "name": "clang-debug",
             "configurePreset": "ninja-clang-debug",
-            "cleanFirst": true
+            "cleanFirst": false
         }
     ]
 }
