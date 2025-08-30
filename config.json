@@ -1,0 +1,29 @@
+{
+    "Bot" : {
+        "Prefix" : "!d",
+        "Activity" : {
+            "type" : 0,
+            "text" : "gaming",
+        }
+    },
+    "Server" : {
+        "Core_Address" : "127.0.0.1",   
+        "Core_Port" : 80,
+        "RetryAttempts": 3
+    },
+    "Services" : {
+        "Redis" : {
+            "host" : "127.0.0.1",
+            "port" : 6379,
+            "dbIndex": 0,
+            "connectionTimeout": 3000
+        },
+        "Logging" : {
+            "level" : 0,
+            "filePath" : "./log.log"
+        }
+    },
+    "Features" : {
+        "DeleteRequestMessage" : false
+    }
+}

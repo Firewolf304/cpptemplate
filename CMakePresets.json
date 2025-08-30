@@ -1,0 +1,51 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 20
+    },
+    "configurePresets": [
+        {
+            "name": "ninja-gcc-debug",
+            "displayName": "Ninja GCC Debug",
+            "generator": "Ninja",
+            "binaryDir": "${workspaceFolder}/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            },
+            "environment": {
+                "CMAKE_BUILD_NAME" : "ninja-gcc-debug"
+            }
+        },
+        {
+            "name": "ninja-clang-debug",
+            "displayName": "Ninja Clang Debug",
+            "generator": "Ninja",
+            "binaryDir": "${workspaceFolder}/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            },
+            "environment": {
+                "CMAKE_BUILD_NAME" : "ninja-clang-debug"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "gcc-debug",
+            "configurePreset": "ninja-gcc-debug",
+            "cleanFirst": true
+        },
+        {
+            "name": "clang-debug",
+            "configurePreset": "ninja-clang-debug",
+            "cleanFirst": true
+        }
+    ]
+}
