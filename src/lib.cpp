@@ -1,5 +1,7 @@
 #include "../include/lib.hpp"
+#include <string>
+#include <format>
 
-void firewolf::hello::say_hello(const std::string& name) {
-    fmt::print("Hello, {}!\n", name);
+std::string firewolf::hello::say_hello(const std::string& name) {
+    return std::format("Hello, {}!", name);
 }
