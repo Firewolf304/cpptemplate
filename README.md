@@ -54,18 +54,18 @@ Build artifacts are placed in ./ninja-gcc-debug/ or ./ninja-clang-debug/.
 * [Install](docs/installs.md)
 
 ## TODO
-- [] Add docker deploy/debug
-- [] Add tests
-- [] Add CI/CD tests
-- [] Add vcpkg autodeploy
-- [] Add old ```make``` support
+- [ ] Add docker deploy/debug
+- [ ] Add tests
+- [ ] Add CI/CD tests
+- [ ] Add vcpkg autodeploy
+- [ ] Add old ```make``` support
 - [x] Add clang-format
-- [] Add clang-tidy
+- [ ] Add clang-tidy
 - [x] Add Release (gcc/clang)
 - [x] Add BuildConfig
 - [x] Add tests
 - [x] Refactor locallib link to ```only headers``` and add local ```target link sources```
-- [] Add fuze testing
-- []
+- [ ] Add fuze testing
+- [ ]
 
 
