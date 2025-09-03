@@ -1,5 +1,6 @@
 #pragma once
+#include <string>
 
 namespace firewolf::hello {
-    void say_hello(const std::string& name);
+std::string say_hello(const std::string &name);
 }

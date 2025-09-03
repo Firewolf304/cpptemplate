@@ -1,8 +1,11 @@
 {
     "terminal.integrated.env.linux" : {
-        "CONFIGURATION_PRESET": "ninja-gcc-debug" // или "ninja-clang-debug"
+        "CONFIGURATION_PRESET": "ninja-clang-debug" // или "ninja-clang-debug"
     },
     "C_Cpp.errorSquiggles": "disabled",
+    "C_Cpp.clang_format_style": "file",
+    "C_Cpp.clang_format_fallbackStyle": "LLVM",
+    "editor.formatOnSave": true,
     "files.associations": {
         "*.page-template": "vue",
         "*.layout-template": "vue",
