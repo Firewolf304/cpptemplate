@@ -10,6 +10,7 @@
 #include "../include/lib.hpp"
 
 int main() {
+
   fmt::print("Filepath {}\n", std::filesystem::current_path().c_str());
   dotenv::init(".env");
   auto name = std::getenv("NAME");

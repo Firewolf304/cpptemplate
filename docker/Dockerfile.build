@@ -1,0 +1,37 @@
+FROM fedora:latest AS builder
+
+ENV HOME_PAGE=/app 
+ENV VCPKG_ROOT=${HOME_PAGE}/vcpkg
+
+RUN dnf install -y dnf5 && \
+    dnf5 install -y \
+    @development-tools autoconf \
+    clang clang-tools-extra \
+    cmake libtool \
+    perl cpanminus \
+    ninja-build \
+    mold lld \
+    gtest gtest-devel \
+    doxygen \
+    glslang spirv-tools && \
+    dnf clean all
+
+WORKDIR ${HOME_PAGE}
+COPY . .
+
+RUN git clone https://github.com/microsoft/vcpkg.git && \
+    ${VCPKG_ROOT}/bootstrap-vcpkg.sh && \
+    ${VCPKG_ROOT}/vcpkg integrate install
+
+
+RUN mkdir -p build && cd build && \
+    cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release && \
+    cmake --build . --parallel $(nproc)
+
+FROM fedora:lates AS runner
+RUN dnf install -y \
+    libstdc++ \
+    glibc \
+    dnf clean all
+
+CMD ["/bin/bash"]

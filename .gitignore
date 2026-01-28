@@ -2,6 +2,7 @@
 bin/
 obj/
 out/
+
 build/
 ninja-clang-debug/
 ninja-clang-debug/**
@@ -11,6 +12,7 @@ ninja-gcc-release/
 ninja-gcc-release/**
 ninja-clang-release/
 ninja-clang-release/**
+
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake

@@ -6,7 +6,7 @@
     "configurations": [
         {
             "name": "(gdb) Launch",
-            "sudo" : false,
+            "sudo": false,
             "type": "cppdbg",
             "request": "launch",
             "program": "${command:cmake.buildDirectory}/bin/${workspaceFolderBasename}",
@@ -28,6 +28,10 @@
                     "ignoreFailures": true
                 }
             ]
+        },
+        {
+            "name": "(docker gdb) Launch",
+            "type": "cppdbg",
         },
         {
             "type": "cmake",
