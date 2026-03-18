@@ -5,8 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "lldb",
+            "request": "launch",
+            "name": "(lldb) Launch",
+            "program": "${command:cmake.buildDirectory}/bin/${workspaceFolderBasename}",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
             "name": "(gdb) Launch",
-            "sudo" : false,
+            "sudo": false,
             "type": "cppdbg",
             "request": "launch",
             "program": "${command:cmake.buildDirectory}/bin/${workspaceFolderBasename}",
@@ -28,14 +36,6 @@
                     "ignoreFailures": true
                 }
             ]
-        },
-        {
-            "type": "cmake",
-            "request": "launch",
-            "name": "Debug portfile(s)",
-            "cmakeDebugType": "external",
-            "pipeName": "/tmp/vcpkg_ext_portfile_dbg",
-            "preLaunchTask": "Debug vcpkg commands"
         }
     ]
 }

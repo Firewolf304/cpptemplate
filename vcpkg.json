@@ -1,11 +1,11 @@
 {
-  "name": "discordbot",
+  "name": "template",
   "dependencies": [
     {
-      "name" : "fmt"
+      "name": "fmt"
     },
     {
-      "name" : "gtest"
+      "name": "gtest"
     }
   ],
   "builtin-baseline": "b6649256091aa433d6d7a912eb5f2c7725a0c040"
